@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDocs - Digital Healthcare Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-700">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-file-medical text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">VDocs</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#team" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Team</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Join Waitlist</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-500 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">About</a>
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Features</a>
+                <a href="#team" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Team</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Contact</a>
+                <a href="#waitlist" class="block bg-blue-500 text-white px-3 py-2 rounded-md text-base font-medium">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">Your Health Records, <span class="text-blue-500">Digitized & Secure</span></h1>
+                    <p class="text-lg text-gray-600 mb-8">VDocs transforms how patients and clinics manage medical reports and appointments. Simple, secure, and accessible from anywhere.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium transition duration-300 text-center">Join Waitlist</a>
+                        <a href="#features" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-md text-lg font-medium transition duration-300 text-center">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="bg-white p-4 rounded-xl shadow-lg w-full max-w-md mx-auto">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Doctor using digital tablet" class="rounded-lg w-full">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">HIPAA Compliant</p>
+                                <p class="text-sm text-gray-600">End-to-end encrypted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility Badge -->
+    <!-- <section class="bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3">
+                        <img src="https://via.placeholder.com/600x400?text=National+Investors+Summit+2025" alt="VDocs at National Investors Summit 2025" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-2/3">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Recognized by Healthcare Leaders</h3>
+                        <p class="text-gray-600 mb-6">VDocs was personally appreciated during a national health innovation event by healthcare leadership figures, reinforcing our mission to bring digital infrastructure to Indian healthcare.</p>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-award text-blue-500 text-xl"></i>
+                            </div>
+                            <p class="text-sm text-gray-600">Featured at National Investors Summit NorthEast 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Family in hospital" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Empowering Healthcare Through Simplicity and Access</h3>
+                    <p class="text-gray-600 mb-6">Even today, over 60% of medical records in India are still maintained on paper—leading to lost reports, delayed treatments, and fragmented care. Small and medium clinics, which serve the majority of the population, often lack the tools to digitize and streamline healthcare delivery.</p>
+                    <p class="text-gray-600 mb-6">At VDocs, we are changing that.</p>
+                    <p class="text-gray-600 mb-6">We believe healthcare data should empower, not overwhelm.
+                                                  That is why we built VDocs: a platform designed to bridge the digital divide in 
+                                                  healthcare—affordable, intuitive, and built for the realities of Indian clinics and 
+                                                  patients.</p>
+                    <p class="text-gray-600 mb-8">Because in critical moments, lives are put at risk—not by lack of treatment, but by lack of right report at the right time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">How VDocs Helps</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Designed specifically for Indian patients and small/medium clinics, VDocs simplifies healthcare management</p>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-upload text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Report Digitization</h3>
+                    <p class="text-gray-600">Convert paper reports to digital format with our clinic partners or upload your existing digital reports. Never lose a medical document again.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Easy Access</h3>
+                    <p class="text-gray-600">Access your complete medical history anytime, anywhere through our secure mobile and web platforms. Share with doctors in seconds.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-md text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Doctor Integration</h3>
+                    <p class="text-gray-600">Clinics using VDocs can seamlessly access patient records with consent, reducing consultation time and improving care quality.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lock text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Secure Data</h3>
+                    <p class="text-gray-600">Military-grade encryption ensures your sensitive health data remains private. You control who can access your information.</p>
+                </div>
+            </div>
+            
+            <!-- Additional Feature Showcase -->
+            <div class="mt-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Appointment Booking</h3>
+                        <p class="text-gray-600 mb-6">Book appointments with VDocs partner clinics and labs through our platform. Receive reminders, reschedule easily, and reduce no-shows.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Real-time availability</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Automated reminders</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">One-Click Sharing of Reports with Doctors</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Appointment booking interface" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Passionate professionals dedicated to transforming healthcare accessibility</p>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="images/arpita.jpg" alt="Founder" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Arpita Singh</h3>
+                        <p class="text-blue-500 font-medium mb-3">Founder & CEO</p>
+                        <p class="text-gray-600 mb-4">On a mission to simplify health record access through VDocs, aligned with ABDM.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/arpitasingh133/" class="text-gray-500 hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="images/doc 4.jpg" alt="Doctor Advisor" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Dr Amitabh Choudhary </h3>
+                        <p class="text-blue-500 font-medium mb-3">Medical Advisor </p>
+                        <p class="text-gray-600 mb-4">With 15+ years of gynecological expertise, Dr. Amitabh is a key medical advisor ensuring quality care through innovative solutions.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://mymedisage.com/profile/amitabh-chaudhary" class="text-gray-500 hover:text-blue-500"><i class="fas fa-stethoscope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="images/nitish.jpg" alt="Tech Lead" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Nitish Agarwal</h3>
+                        <p class="text-blue-500 font-medium mb-3">CTO </p>
+                        <p class="text-gray-600 mb-4">Full-stack developer specializing in healthcare systems, ensuring VDocs is both powerful and easy to use for clinics of all technical levels.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/1-nitish-agrawal" class="text-gray-500 hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a href="#" class="text-gray-500 hover:text-blue-500"><i class="fab fa-github"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section
+    <section id="waitlist" class="gradient-bg py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Join Our Waitlist</h2>
+            <p class="text-xl text-gray-600 mb-8">Be among the first to experience VDocs when we launch. Join our waitlist for patients or clinics below.</p>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    Patient Waitlist
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">For Patients</h3>
+                        <p class="text-gray-600 mb-6">Get early access to digitize your medical records and book appointments seamlessly.</p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Your email" class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Join as Patient</button>
+                        </form>
+                    </div>
+                    
+                    Clinic Waitlist
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clinic-medical text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">For Clinics</h3>
+                        <p class="text-gray-600 mb-6">Express interest in becoming a VDocs partner clinic to serve your patients better.</p>
+                        <form class="space-y-4">
+                            <input type="email" placeholder="Your email" class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Join as Clinic</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <p class="mt-8 text-gray-600">Have questions? <a href="#contact" class="text-blue-600 font-medium hover:underline">Contact our team</a></p>
+            </div>
+        </div>
+    </section>
+
+    Contact Section
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We'd love to hear from you. Reach out for partnerships, support, or just to say hello!</p>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <select id="subject" name="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option>General Inquiry</option>
+                                <option>Partnership Opportunities</option>
+                                <option>Technical Support</option>
+                                <option>Clinic Onboarding</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500">Our Office</h4>
+                                    <p class="mt-1 text-gray-700">Hyderabad, Telangana, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-envelope text-blue-500"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500">Email Us</h4>
+                                    <p class="mt-1 text-gray-700">hello@vdocs.in</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-phone-alt text-blue-500"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500">Call Us</h4>
+                                    <p class="mt-1 text-gray-700">+91 98765 43210</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <h4 class="text-sm font-medium text-gray-500 mb-3">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-gray-200 hover:bg-blue-100 p-3 rounded-full text-gray-700 hover:text-blue-500 transition duration-300">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-200 hover:bg-blue-100 p-3 rounded-full text-gray-700 hover:text-blue-500 transition duration-300">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-200 hover:bg-blue-100 p-3 rounded-full text-gray-700 hover:text-blue-500 transition duration-300">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-200 hover:bg-blue-100 p-3 rounded-full text-gray-700 hover:text-blue-500 transition duration-300">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Waitlist Section -->
+<section id="waitlist" class="gradient-bg py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Join Our Waitlist</h2>
+        <p class="text-xl text-gray-600 mb-8">Be among the first to experience VDocs when we launch. Join our waitlist for patients or clinics below.</p>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Patient Waitlist -->
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">For Patients</h3>
+                    <p class="text-gray-600 mb-6">Get early access to digitize your medical records and book appointments seamlessly.</p>
+                    <form action="https://formspree.io/f/xjkwdnel" method="POST" class="space-y-4">
+                        <label class="block">
+                            <span class="text-gray-700">Your email:</span>
+                            <input type="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                        </label>
+                        <input type="hidden" name="_subject" value="New Patient Waitlist Submission">
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Join as Patient</button>
+                    </form>
+                </div>
+                
+                <!-- Clinic Waitlist -->
+                <div class="border border-gray-200 rounded-lg p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clinic-medical text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">For Clinics</h3>
+                    <p class="text-gray-600 mb-6">Express interest in becoming a VDocs partner clinic to serve your patients better.</p>
+                    <form action="https://formspree.io/f/xjkwdnel" method="POST" class="space-y-4">
+                        <label class="block">
+                            <span class="text-gray-700">Your email:</span>
+                            <input type="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+                        </label>
+                        <label class="block">
+                            <span class="text-gray-700">Your message (optional):</span>
+                            <textarea name="message" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </label>
+                        <input type="hidden" name="_subject" value="New Clinic Waitlist Submission">
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition duration-300">Join as Clinic</button>
+                    </form>
+                </div>
+            </div>
+            
+            <p class="mt-8 text-gray-600">Have questions? <a href="#contact" class="text-blue-600 font-medium hover:underline">Contact our team</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Success Message Modal (hidden by default) -->
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-8 rounded-lg max-w-md mx-4">
+        <div class="text-center">
+            <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mt-3">Thank you!</h3>
+            <div class="mt-2">
+                <p class="text-sm text-gray-500">Your submission has been received. We'll contact you soon.</p>
+            </div>
+            <div class="mt-4">
+                <button onclick="document.getElementById('successModal').classList.add('hidden')" type="button" class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for form handling -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('form');
+    
+    forms.forEach(form => {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = `
+                <span class="flex items-center justify-center">
+                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Processing...
+                </span>
+            `;
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success modal
+                    document.getElementById('successModal').classList.remove('hidden');
+                    // Reset form
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message below form
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'mt-4 p-4 bg-red-100 text-red-700 rounded-md';
+                errorDiv.textContent = 'Oops! Something went wrong. Please try again.';
+                form.appendChild(errorDiv);
+                
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorDiv.remove();
+                }, 5000);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        });
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">VDocs</h3>
+                    <p class="text-gray-400">Making healthcare accessible and organized for every Indian patient and clinic.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Team</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">HIPAA Compliance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Data Security</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new features and healthcare tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 VDocs Health Technologies. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Form submission (placeholder)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+        
+        // Waitlist form submission
+        const waitlistForms = document.querySelectorAll('#waitlist form');
+        waitlistForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const type = form.querySelector('button').textContent.includes('Patient') ? 'patient' : 'clinic';
+                alert(`Thank you for joining our ${type} waitlist! We'll notify you when VDocs launches.`);
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
