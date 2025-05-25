@@ -627,7 +627,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>
                 </div>
                 
-                <div>
+                <!-- <div>
                     <h3 class="text-lg font-semibold mb-4">Legal</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
@@ -635,7 +635,92 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="#" class="text-gray-400 hover:text-white transition">HIPAA Compliance</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Data Security</a></li>
                     </ul>
-                </div>
+                </div> -->
+
+<!-- Legal Links -->
+                 
+<div>
+  <h3 class="text-lg font-semibold mb-4">Legal</h3>
+  <ul class="space-y-2">
+    <li>
+      <a href="#" onclick="openModal('privacyModal')" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+    </li>
+    <li>
+      <a href="#" onclick="openModal('termsModal')" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+    </li>
+    <li>
+      <a href="#" onclick="openModal('hipaaModal')" class="text-gray-400 hover:text-white transition">HIPAA Compliance</a>
+    </li>
+    <li>
+      <a href="#" onclick="openModal('securityModal')" class="text-gray-400 hover:text-white transition">Data Security</a>
+    </li>
+  </ul>
+</div>
+<!-- Modal Template for Privacy -->
+<div id="privacyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 text-center">
+    <h2 class="text-xl font-semibold mb-2">Privacy Policy</h2>
+    <p class="text-gray-600 mb-4">
+        At VDocs, your privacy is fundamental to our mission. We are committed to protecting the confidentiality and integrity of your personal health information. Our systems are designed with a privacy-first mindset, ensuring that all data shared with us is handled with the utmost care and sensitivity.
+        We collect only the information necessary to deliver our core services — including appointment scheduling and health record access — and we do not sell or rent your personal information to third parties. Any data shared with clinics or labs is done strictly to facilitate healthcare services, and only with your consent.
+        As we continue to evolve, we are progressively implementing industry-standard practices around encryption, secure storage, and access controls. We also follow applicable Indian data protection guidelines to ensure your trust is well-placed.
+    </p>
+    <button onclick="closeModal('privacyModal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+  </div>
+</div>
+
+<!-- Clone this for each: Terms, HIPAA, Security -->
+<div id="termsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 text-center">
+    <h2 class="text-xl font-semibold mb-2">Terms of Service</h2>
+    <p class="text-gray-600 mb-4">
+        By accessing and using VDocs, you agree to abide by the terms outlined here. VDocs is a digital platform built to simplify healthcare interactions — from booking appointments to managing health records. Our current version is an early-stage product, and while we strive for reliability, there may be occasional interruptions or changes in service.
+        Use of our platform should be in compliance with all applicable laws. You agree not to misuse the service, attempt unauthorized access, or engage in activities that may compromise data security or the platform functionality.
+        The platform may integrate or interface with healthcare providers, labs, and clinics. VDocs does not provide medical advice or treatment directly — it acts as a facilitator. Any medical decisions or consultations should be made between you and your healthcare provider.
+    </p>
+    <button onclick="closeModal('termsModal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+  </div>
+</div>
+
+<div id="hipaaModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 text-center">
+    <h2 class="text-xl font-semibold mb-2">HIPAA Compliance</h2>
+    <p class="text-gray-600 mb-4">
+        While HIPAA (Health Insurance Portability and Accountability Act) is a U.S.-based regulation, we recognize its importance as a global standard for handling protected health information (PHI). VDocs is actively aligning its architecture and data management practices with internationally recognized privacy principles, including those outlined in HIPAA.
+        Our roadmap includes adopting robust access controls, audit trails, and encryption measures consistent with HIPAA-aligned systems. As we scale, our goal is to meet or exceed standards that ensure secure and ethical handling of health data — whether under Indian regulations or global best practices.
+        We are committed to transparency and will keep our users informed about our compliance journey. As we grow, we will implement features that allow users to manage their consent and data sharing preferences effectively.
+    </p>
+    <button onclick="closeModal('hipaaModal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+  </div>
+</div>
+
+<div id="securityModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 text-center">
+    <h2 class="text-xl font-semibold mb-2">Data Security</h2>
+    <p class="text-gray-600 mb-4">
+        Security is central to everything we build at VDocs. Even in our current MVP stage, we have laid the foundation for a secure architecture — from encrypted data transfers to restricted user access protocols.
+        Our infrastructure is being developed with multiple layers of protection to safeguard sensitive health data. This includes:
+        Encryption of data in transit and at rest (in progressive rollout).
+        Role-based access control for clinics, labs, and patients.
+        Consent-driven data sharing to ensure users remain in control of their health information.
+        Continuous threat assessment as part of our development cycle.
+        As we evolve, we are committed to regularly reviewing and upgrading our security protocols in line with industry standards and compliance requirements.
+    </p>
+    <button onclick="closeModal('securityModal')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Close</button>
+  </div>
+</div>
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
+
+
+                <!-- Newsletter Section -->
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
@@ -650,18 +735,18 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             
             <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 VDocs Health Technologies. All rights reserved.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 VDocs Health Technologies. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
+                    <!-- <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i> -->
+                    <!-- </a>
                     <a href="#" class="text-gray-400 hover:text-white">
                         <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    </a> -->
+                    <a href="https://www.linkedin.com/company/vdocshealth/?viewAsMember=true" class="text-gray-400 hover:text-white">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
+                    <a href="https://www.instagram.com/vdocs.healthcare/" class="text-gray-400 hover:text-white">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
