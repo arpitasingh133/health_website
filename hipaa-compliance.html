@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDocs | HIPAA Compliance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(14,165,233,0.05) 0%, rgba(22,163,74,0.05) 100%);
+            background-color: #f8fafc;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .security-badge {
+            position: relative;
+        }
+        .security-badge::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    
+   <header class="sticky top-0 z-50 bg-white shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center space-x-2">
+        <div class="w-16 h-16 rounded-lg flex items-center justify-center overflow-hidden">
+          <img src="images/logo.png" alt="VDocs Logo" class="w-full h-full object-contain">
+        </div>
+        <span class="text-xl font-bold text-primary-800 sr-only">VDocs</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html#features" class="text-gray-600 hover:text-primary-600 transition">Features</a>
+        <a href="index.html#solutions" class="text-gray-600 hover:text-primary-600 transition">Solutions</a>
+        <a href="index.html#for-doctors" class="text-gray-600 hover:text-primary-600 transition">For Providers</a>
+        <a href="index.html#security" class="text-gray-600 hover:text-primary-600 transition">Security</a>
+        <a href="index.html#faq" class="text-gray-600 hover:text-primary-600 transition">FAQ</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="flex space-x-4">
+        <a href="index.html#partner" class="hidden md:inline-block px-4 py-2 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition">Partner With Us</a>
+        <a href="index.html#join-waitlist" class="px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition">Join Waitlist</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden focus:outline-none">
+        <i class="fas fa-bars text-gray-600 text-xl"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<section class="gradient-bg py-16 text-center rounded-xl shadow-md">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="flex justify-center items-center gap-4">
+      <div class="text-primary-600 text-4xl"><i class="fas fa-notes-medical"></i></div>
+      <h1 class="text-4xl font-bold text-gray-900">HIPAA Compliance</h1>
+    </div>
+    <p class="mt-4 text-lg text-gray-600">How VDocs complies with HIPAA to protect your health information.</p>
+  </div>
+</section>
+
+
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-gray-700 space-y-10">
+
+  <div>
+    <h2 class="text-xl font-semibold flex items-center gap-2 text-primary-700">
+      <span class="font-bold text-lg">1.</span> <i class="fas fa-shield-alt"></i> Security Measures
+    </h2>
+    <p class="mt-2 leading-relaxed">
+      We implement administrative, physical, and technical safeguards including encryption, access controls, employee training, and regular audits to ensure the confidentiality and integrity of your Protected Health Information (PHI).
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-semibold flex items-center gap-2 text-primary-700">
+      <span class="font-bold text-lg">2.</span> <i class="fas fa-handshake"></i> Business Associate Agreements
+    </h2>
+    <p class="mt-2 leading-relaxed">
+      We require all third-party vendors and partners who handle PHI on our behalf to sign Business Associate Agreements (BAAs), ensuring they follow HIPAA regulations.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-semibold flex items-center gap-2 text-primary-700">
+      <span class="font-bold text-lg">3.</span> <i class="fas fa-user-injured"></i> Patient Rights
+    </h2>
+    <p class="mt-2 leading-relaxed">
+      You have the right to access your health information, request amendments, and receive a record of disclosures. We honor these rights in line with HIPAA mandates.
+    </p>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-semibold flex items-center gap-2 text-primary-700">
+      <span class="font-bold text-lg">4.</span> <i class="fas fa-bell"></i> Breach Notification
+    </h2>
+    <p class="mt-2 leading-relaxed">
+      In the event of a breach of unsecured PHI, we will promptly notify affected individuals, the Department of Health and Human Services (HHS), and other required parties as outlined by HIPAA’s Breach Notification Rule.
+    </p>
+    <div class="bg-red-50 border-l-4 border-red-400 p-4 mt-4 text-red-800 rounded-md">
+      ⚠️ <strong>Important:</strong> If you suspect a breach of your data, contact us immediately at <a href="mailto:" class="underline">dk_mail_yet</a>.
+    </div>
+  </div>
+
+</section>
+
+   <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-file-medical text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">VDocs</span>
+                    </div>
+                    <p class="mt-4 text-sm">
+                        Revolutionizing healthcare through secure digital records and AI-powered insights.
+                    </p>
+                    <div class="mt-6 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Product</h3>
+                    <div class="mt-4 space-y-2">
+                        <a href="#" class="block text-sm hover:text-white transition">Features</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Security</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Benefits</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Pricing</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
+                    <div class="mt-4 space-y-2">
+                        <a href="#" class="block text-sm hover:text-white transition">About Us</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Careers</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Partnerships</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Press</a>
+                    </div>
+                </div>
+                <div>
+    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Legal</h3>
+    <div class="mt-4 space-y-2">
+        <a href="privacy-policy.html" class="block text-sm hover:text-white transition">Privacy Policy</a>
+        <a href="terms-of-service.html" class="block text-sm hover:text-white transition">Terms of Service</a>
+        <a href="hipaa-compliance.html" class="block text-sm hover:text-white transition">HIPAA Compliance</a>
+        <a href="gdpr-compliance.html" class="block text-sm hover:text-white transition">GDPR Compliance</a>
+    </div>
+</div>
+
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-xs text-gray-500 text-center">
+                    &copy; 2025 VDocs Health Technologies. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
