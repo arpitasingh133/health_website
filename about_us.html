@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | vdocs.in - Secure Digital Health Records</title>
+    <style>
+        /* ===== Base Styles ===== */
+        :root {
+            --primary: #4A6FA5;  /* Trustworthy blue */
+            --secondary: #50C2C9; /* Health-tech teal */
+            --dark: #2E4057;
+            --light: #F8F9FA;
+            --accent: #FF6B6B;   /* Soft red for CTAs */
+            --font-main: 'Inter', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== Sections ===== */
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f4ff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Problem/Solution */
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 80px 0;
+            align-items: center;
+        }
+        
+        .two-column .left, .two-column .right {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .two-column h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Features Grid */
+        .features {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* Vision */
+        .vision {
+            background-color: var(--primary);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .vision h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        /* ===== UI Elements ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            margin-left: 15px;
+        }
+        
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <!-- Inter Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon Library (Font Awesome for demo) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Empowering Your Health Journey</h1>
+            <p>At vdocs.in, we believe seamless access to health records saves lives. Our mission is to bridge India’s healthcare gap through AI-powered, patient-controlled digital records—so you never lose a report, miss a reminder, or compromise privacy.</p>
+            <a href="#join-waitlist" class="btn">Join Waitlist</a>
+        </div>
+    </section>
+    
+    <!-- Problem/Solution Section -->
+    <section class="container two-column">
+        <div class="left">
+            <h2>The Problem We Solve</h2>
+            <p><strong>Lost reports, fragmented care:</strong> 40% of Indians struggle with misplaced health records, leading to repeated tests and delayed treatment.</p>
+            <p><strong>No health tracking:</strong> Chronic conditions go unmanaged without centralized history.</p>
+            <p><strong>Data privacy risks:</strong> Physical reports and unsecured apps expose sensitive data.</p>
+        </div>
+        <div class="right">
+            <h2>Our Unique Solution</h2>
+            <p><strong>AI-powered organization:</strong> Scan, categorize, and analyze reports with smart reminders.</p>
+            <p><strong>Zero-knowledge encryption:</strong> Your data stays private—even we can’t access it.</p>
+            <p><strong>ABDM integration:</strong> Seamlessly connect with India’s digital health ecosystem.</p>
+        </div>
+    </section>
+    
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center;">How vdocs.in Works</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Smart Scanning</h3>
+                    <p>AI extracts key data from any lab report or prescription, organizing it automatically.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Health Reminders</h3>
+                    <p>Get alerts for medication, tests, and appointments based on your records.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Military-Grade Security</h3>
+                    <p>End-to-end encrypted cloud storage with patient-controlled access.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ABDM Ready</h3>
+                    <p>Share records with Ayushman Bharat Digital Mission providers in one click.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vision -->
+    <section class="vision">
+        <div class="container">
+            <h2>Our Vision for India’s Health Future</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">We envision an India where every citizen owns their complete health history securely, doctors make data-driven decisions, and no life is lost due to missing records. By 2030, we aim to serve 50 million Indians with frictionless, ethical health-tech.</p>
+        </div>
+    </section>
+    
+    <!-- Team/Story (Optional) -->
+    <section class="container" style="padding: 80px 0; text-align: center;">
+        <h2>Born from Personal Struggle</h2>
+        <p style="max-width: 700px; margin: 0 auto;">After losing critical time hunting for his father’s cancer reports across 5 hospitals, our founder built vdocs.in to ensure no family faces this chaos again. Today, we’re a team of doctors, engineers, and privacy advocates united by one goal: <strong>your health data should empower, not endanger you.</strong></p>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2 style="margin-bottom: 30px;">Ready to Take Control of Your Health Records?</h2>
+            <a href="#join-waitlist" class="btn">Join Waitlist</a>
+            <a href="/features" class="btn btn-outline">Learn More</a>
+        </div>
+    </section>
+</body>
+</html>
