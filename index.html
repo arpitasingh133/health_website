@@ -90,7 +90,7 @@
                     <a href="#faq" class="text-gray-600 hover:text-primary-600 transition">FAQ</a>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#partner" class="hidden md:inline-block px-4 py-2 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition">Partner With Us</a>
+                    <!-- <a href="#partner" class="hidden md:inline-block px-4 py-2 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition">Partner With Us</a> -->
                     <a href="#join-waitlist" class="px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition">Join Waitlist</a>
                 </div>
                 <button class="md:hidden focus:outline-none">
@@ -117,10 +117,10 @@
                             <i class="fas fa-download"></i>
                             <span>Download App</span>
                         </a>
-                        <a href="#demo" class="px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition border border-primary-200 flex items-center space-x-2">
+                        <!-- <a href="#demo" class="px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition border border-primary-200 flex items-center space-x-2">
                             <i class="fas fa-calendar-alt"></i>
                             <span>Schedule Demo</span>
-                        </a>
+                        </a> -->
                     </div>
                     <div class="mt-8 flex items-center space-x-4">
                         <div class="flex -space-x-2">
@@ -587,7 +587,125 @@
     </section>
 
     <!-- Join Waitlist -->
-    <section id="join-waitlist" class="gradient-bg py-20">
+     <!-- Join Waitlist -->
+<section id="join-waitlist" class="gradient-bg py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="p-10">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Ready to take control of your medical records?
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Join our waitlist for early access to the VDocs platform.
+          </p>
+        </div>
+
+        <form id="waitlist-form" class="mt-8 max-w-md mx-auto grid gap-6">
+          <div>
+            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input id="full-name" name="name" type="text" required
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Your Name">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="you@example.com">
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}"
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="10-digit phone number">
+          </div>
+
+          <div>
+            <label for="user-type" class="block text-sm font-medium text-gray-700">I am a</label>
+            <select id="user-type" name="userType" required
+              class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 rounded-lg shadow-sm">
+              <option value="">Select</option>
+              <option>Patient</option>
+              <option>Doctor/Healthcare Provider</option>
+              <option>Diagnostic Center</option>
+              <option>Hospital Administrator</option>
+            </select>
+          </div>
+
+          <div>
+            <button type="submit"
+              class="w-full flex justify-center py-3 px-6 border border-transparent rounded-lg shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-medium">
+              Join Waitlist
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+     <!-- <section id="join-waitlist" class="gradient-bg py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="p-10">
+        <div class="text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Ready to take control of your medical records?
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Join our waitlist for early access to the VDocs platform.
+          </p>
+        </div>
+
+        <form class="mt-8 max-w-md mx-auto grid gap-6">
+          <div>
+            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input id="full-name" name="full-name" type="text" required
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="Your Name">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="you@example.com">
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}"
+              class="mt-1 block w-full px-5 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+              placeholder="10-digit phone number">
+          </div>
+
+          <div>
+            <label for="user-type" class="block text-sm font-medium text-gray-700">I am a</label>
+            <select id="user-type" name="user-type" required
+              class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 rounded-lg shadow-sm">
+              <option value="">Select</option>
+              <option>Patient</option>
+              <option>Doctor/Healthcare Provider</option>
+              <option>Diagnostic Center</option>
+              <option>Hospital Administrator</option>
+            </select>
+          </div>
+
+          <div>
+            <button type="submit"
+              class="w-full flex justify-center py-3 px-6 border border-transparent rounded-lg shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 font-medium">
+              Join Waitlist
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+    <!-- <section id="join-waitlist" class="gradient-bg py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div class="p-10">
@@ -627,7 +745,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact & Footer -->
     <footer class="bg-gray-900 text-gray-400">
@@ -650,8 +768,8 @@
                         <!-- <a href="#" class="text-gray-400 hover:text-white">
                             <i class="fab fa-twitter"></i>
                         </a> -->
-                        <!-- <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i> -->
+                        <a href="https://www.instagram.com/vdocs.healthcare?igsh=MTk3czhkNnBjZjEzaw==" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://www.linkedin.com/company/vdocshealth/" class="text-gray-400 hover:text-white">
                             <i class="fab fa-linkedin-in"></i>
@@ -685,7 +803,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script>
         // Simple form submission handler
         document.querySelector('form').addEventListener('submit', function(e) {
@@ -693,6 +811,40 @@
             const email = document.getElementById('email').value;
             alert(`Thank you for joining our waitlist! We'll contact you at ${email} when VDocs is ready.`);
             document.getElementById('email').value = '';
+        });
+    </script> -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        // Waitlist form submission handler
+        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.querySelector('#waitlist-form [name="name"]').value,
+                email: document.querySelector('#waitlist-form [name="email"]').value,
+                phone: document.querySelector('#waitlist-form [name="phone"]').value,
+                userType: document.querySelector('#waitlist-form [name="userType"]').value
+            };
+            
+            // Send data to Google Sheets
+            fetch('https://script.google.com/macros/s/AKfycbwKC_D9p7Sw93vL97Lws-nxrWdMwd_WplGIjlumRKH0mX7nIZlTcAwrjno-kkHLXvK-/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                alert('Thank you for joining our waitlist! We will contact you soon.');
+                document.getElementById('waitlist-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Thank you for joining our waitlist! We will contact you soon.');
+                document.getElementById('waitlist-form').reset();
+            });
         });
     </script>
 </body>
