@@ -3,244 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | vdocs.in - Secure Digital Health Records</title>
+    <title>About Us | VDocs - Secure Digital Health Records with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        /* ===== Base Styles ===== */
-        :root {
-            --primary: #4A6FA5;  /* Trustworthy blue */
-            --secondary: #50C2C9; /* Health-tech teal */
-            --dark: #2E4057;
-            --light: #F8F9FA;
-            --accent: #FF6B6B;   /* Soft red for CTAs */
-            --font-main: 'Inter', sans-serif;
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(14,165,233,0.05) 0%, rgba(22,163,74,0.05) 100%);
+            background-color: #f8fafc;
         }
-        
-        body {
-            font-family: var(--font-main);
-            line-height: 1.6;
-            color: var(--dark);
-            margin: 0;
-            padding: 0;
-            background-color: white;
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .security-badge {
+            position: relative;
         }
-        
-        /* ===== Sections ===== */
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e6f4ff 100%);
-            padding: 80px 0;
-            text-align: center;
+        .security-badge::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            border: 3px solid white;
         }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+        .about-hero {
+            background: linear-gradient(135deg, rgba(14,165,233,0.05) 0%, rgba(22,163,74,0.05) 100%);
+            position: relative;
+            overflow: hidden;
         }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, rgba(14,165,233,0) 70%);
+            z-index: 0;
         }
-        
-        /* Problem/Solution */
-        .two-column {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            padding: 80px 0;
-            align-items: center;
-        }
-        
-        .two-column .left, .two-column .right {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .two-column h2 {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        /* Features Grid */
-        .features {
-            background-color: var(--light);
-            padding: 80px 0;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-item {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
         .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .stat-number {
             font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        
-        /* Vision */
-        .vision {
-            background-color: var(--primary);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-        
-        .vision h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-        }
-        
-        /* CTA */
-        .cta {
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        /* ===== UI Elements ===== */
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent);
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #ff5252;
-            transform: translateY(-2px);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            margin-left: 15px;
-        }
-        
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            .two-column {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
+            font-weight: 700;
+            background: linear-gradient(to right, #0ea5e9, #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
-    <!-- Inter Font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Icon Library (Font Awesome for demo) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="images/logo.png" alt="VDocs Logo" class="w-full h-full object-contain">
+                    </div>
+                    <span class="text-xl font-bold text-primary-800 sr-only">VDocs</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+                    <a href="about_us.html" class="text-primary-600 font-medium transition">About Us</a>
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 transition">Features</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#partner" class="hidden md:inline-block px-4 py-2 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition">Partner With Us</a>
+                    <a href="#join-waitlist" class="px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition">Join Waitlist</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-600 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Empowering Your Health Journey</h1>
-            <p>At vdocs.in, we believe seamless access to health records saves lives. Our mission is to bridge India’s healthcare gap through AI-powered, patient-controlled digital records—so you never lose a report, miss a reminder, or compromise privacy.</p>
-            <a href="#join-waitlist" class="btn">Join Waitlist</a>
+    <section class="about-hero py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight animate__animated animate__fadeInDown">
+                    Empowering Your Health Journey
+                </h1>
+                <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
+                    VDocs is committed to simplifying how people manage their health records. We offer secure, AI-enhanced tools to help individuals organize, track, and share their medical documents—while maintaining control over their data.
+                </p>
+            </div>
         </div>
     </section>
-    
-    <!-- Problem/Solution Section -->
-    <section class="container two-column">
-        <div class="left">
-            <h2>The Problem We Solve</h2>
-            <p><strong>Lost reports, fragmented care:</strong> 40% of Indians struggle with misplaced health records, leading to repeated tests and delayed treatment.</p>
-            <p><strong>No health tracking:</strong> Chronic conditions go unmanaged without centralized history.</p>
-            <p><strong>Data privacy risks:</strong> Physical reports and unsecured apps expose sensitive data.</p>
-        </div>
-        <div class="right">
-            <h2>Our Unique Solution</h2>
-            <p><strong>AI-powered organization:</strong> Scan, categorize, and analyze reports with smart reminders.</p>
-            <p><strong>Zero-knowledge encryption:</strong> Your data stays private—even we can’t access it.</p>
-            <p><strong>ABDM integration:</strong> Seamlessly connect with India’s digital health ecosystem.</p>
-        </div>
-    </section>
-    
-    <!-- Features Grid -->
-    <section class="features">
-        <div class="container">
-            <h2 style="text-align: center;">How vdocs.in Works</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-camera-retro"></i>
+
+    <!-- Why We Exist / Our Approach -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate__animated animate__fadeInLeft">
+                    <h2 class="text-3xl font-bold text-primary-600 mb-6 relative pb-4">
+                        Why We Exist
+                        <span class="absolute bottom-0 left-0 w-16 h-1 bg-secondary-500 rounded-full"></span>
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>Fragmented care:</strong> Many patients face difficulties managing health documents across clinics, labs, and hospitals.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>Lack of continuity:</strong> Important test histories or prescriptions are often unavailable at the point of care.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>Data vulnerabilities:</strong> Paper records and unprotected systems expose sensitive medical data to loss or misuse.</p>
+                        </div>
                     </div>
-                    <h3>Smart Scanning</h3>
-                    <p>AI extracts key data from any lab report or prescription, organizing it automatically.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
+                <div class="animate__animated animate__fadeInRight">
+                    <h2 class="text-3xl font-bold text-primary-600 mb-6 relative pb-4">
+                        Our Approach
+                        <span class="absolute bottom-0 left-0 w-16 h-1 bg-secondary-500 rounded-full"></span>
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>AI-assisted management:</strong> Intelligent tools to help users organize and retrieve records (available in phases).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>Encryption-first:</strong> End-to-end encryption and user-controlled sharing for enhanced privacy and confidentiality.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 mr-4">
+                                <div class="w-5 h-5 rounded-full bg-secondary-100 flex items-center justify-center">
+                                    <i class="fas fa-check text-secondary-500 text-xs"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700"><strong>ABDM-ready architecture:</strong> Built with support for integration with India's Ayushman Bharat Digital Mission.</p>
+                        </div>
                     </div>
-                    <h3>Health Reminders</h3>
-                    <p>Get alerts for medication, tests, and appointments based on your records.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Military-Grade Security</h3>
-                    <p>End-to-end encrypted cloud storage with patient-controlled access.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>ABDM Ready</h3>
-                    <p>Share records with Ayushman Bharat Digital Mission providers in one click.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Vision -->
-    <section class="vision">
-        <div class="container">
-            <h2>Our Vision for India’s Health Future</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">We envision an India where every citizen owns their complete health history securely, doctors make data-driven decisions, and no life is lost due to missing records. By 2030, we aim to serve 50 million Indians with frictionless, ethical health-tech.</p>
+
+    <!-- Key Features -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-primary-600 font-medium">KEY FEATURES</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Discover how VDocs transforms your health record management</h2>
+                <p class="mt-4 text-lg text-gray-600">
+                    Cutting-edge technology designed for your health security
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-1s">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">AI-Enhanced Scanning</h3>
+                    <p class="mt-3 text-gray-600">
+                        Scan and organize reports with auto-categorization and search (feature roll-out in progress).
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">Reminders & Alerts</h3>
+                    <p class="mt-3 text-gray-600">
+                        Set reminders for upcoming check-ups, medications, or follow-ups.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">Secure by Design</h3>
+                    <p class="mt-3 text-gray-600">
+                        Uses encryption standards to ensure medical records remain private and accessible only by the user.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-1s">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">ABDM Integration</h3>
+                    <p class="mt-3 text-gray-600">
+                        Support for connecting with verified healthcare providers under the Digital Health Mission.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-2s">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">Health Trends</h3>
+                    <p class="mt-3 text-gray-600">
+                        Visualize your health metrics over time to track progress and identify patterns.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl feature-card transition duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mt-6">Emergency Access</h3>
+                    <p class="mt-3 text-gray-600">
+                        Grant temporary access to medical professionals in emergency situations.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!-- Team/Story (Optional) -->
-    <section class="container" style="padding: 80px 0; text-align: center;">
-        <h2>Born from Personal Struggle</h2>
-        <p style="max-width: 700px; margin: 0 auto;">After losing critical time hunting for his father’s cancer reports across 5 hospitals, our founder built vdocs.in to ensure no family faces this chaos again. Today, we’re a team of doctors, engineers, and privacy advocates united by one goal: <strong>your health data should empower, not endanger you.</strong></p>
-    </section>
-    
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2 style="margin-bottom: 30px;">Ready to Take Control of Your Health Records?</h2>
-            <a href="#join-waitlist" class="btn">Join Waitlist</a>
-            <a href="/features" class="btn btn-outline">Learn More</a>
+
+    <!-- Our Story -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate__animated animate__fadeIn">
+            <span class="text-primary-600 font-medium">OUR STORY</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">From personal challenge to healthcare solution</h2>
+            <p class="mt-6 text-lg text-gray-600">
+                VDocs was inspired by a real-life experience of navigating India's healthcare system without easy access to past medical records. What began as a personal mission has now grown into a collective effort by engineers, doctors, and data privacy experts to reimagine health record accessibility.
+            </p>
         </div>
     </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate__animated animate__fadeIn">
+            <h2 class="text-3xl md:text-4xl font-bold">Take the First Step Toward Better Health Management</h2>
+            <p class="mt-6 text-lg text-gray-600">
+                Join thousands of users who are taking control of their health records with VDocs's secure platform.
+            </p>
+            <!-- <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <a href="#join-waitlist" class="px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition flex items-center space-x-2">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Join Waitlist</span>
+                </a>
+                <a href="#demo" class="px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition border border-primary-200 flex items-center space-x-2">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Watch Demo</span>
+                </a>
+            </div> -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto">
+    <a href="#join-waitlist" class="w-full sm:w-auto px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition flex items-center justify-center space-x-2">
+        <i class="fas fa-user-plus"></i>
+        <span>Join Waitlist</span>
+    </a>
+    <a href="#demo" class="w-full sm:w-auto px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition border border-primary-200 flex items-center justify-center space-x-2">
+        <i class="fas fa-play-circle"></i>
+        <span>Watch Demo</span>
+    </a>
+</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-file-medical text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">VDocs</span>
+                    </div>
+                    <p class="mt-4 text-sm">
+                        Revolutionizing healthcare through secure digital records and AI-powered insights.
+                    </p>
+                    <div class="mt-6 flex space-x-6">
+                        <a href="https://www.linkedin.com/company/vdocshealth/" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
+                    <div class="mt-4 space-y-2">
+                        <a href="about_us.html" class="block text-sm hover:text-white transition">About Us</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Careers</a>
+                        <a href="#" class="block text-sm hover:text-white transition">Partnerships</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Legal</h3>
+                    <div class="mt-4 space-y-2">
+                        <a href="privacy-policy.html" class="block text-sm hover:text-white transition">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="block text-sm hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8">
+                <p class="text-xs text-gray-500 text-center">
+                    &copy; 2025 VD NextGen Digital Private Limited. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.getAttribute('class').split('animate__')[1];
+                        entry.target.classList.add('animate__' + animation);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
