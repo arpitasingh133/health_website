@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: {
+                        50: '#f0f9ff',
+                        100: '#e0f2fe',
+                        200: '#bae6fd',
+                        300: '#7dd3fc',
+                        400: '#38bdf8',
+                        500: '#0ea5e9',
+                        600: '#0284c7',
+                        700: '#0369a1',
+                        800: '#075985',
+                        900: '#0c4a6e',
+                    }
+                }
+            }
+        }
+    }
+</script>
 
     <style>
         .gradient-bg {
@@ -124,7 +146,7 @@
                     Empowering Your Health Journey
                 </h1>
                 <p class="mt-6 text-xl text-gray-600 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
-                    VDocs is committed to simplifying how people manage their health records. We offer secure, AI-enhanced tools to help individuals organize, track, and share their medical documents—while maintaining control over their data.
+                    VDocs is commitfted to simplifying how people manage their health records. We offer secure, AI-enhanced tools to help individuals organize, track, and share their medical documents—while maintaining control over their data.
                 </p>
             </div>
         </div>
@@ -301,16 +323,24 @@
                     <span>Watch Demo</span>
                 </a>
             </div> -->
-            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto">
-    <a href="#join-waitlist" class="w-full sm:w-auto px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition flex items-center justify-center space-x-2">
-        <i class="fas fa-user-plus"></i>
-        <span>Join Waitlist</span>
+           <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md mx-auto">
+    <a href="index.html#join-waitlist"
+       class="px-6 py-3 bg-[#0284c7] text-white font-semibold rounded-lg shadow hover:bg-[#0369a1] transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+        Join Waitlist
     </a>
-    <a href="#demo" class="w-full sm:w-auto px-6 py-3 bg-white text-primary-600 font-medium rounded-lg hover:bg-gray-50 transition border border-primary-200 flex items-center justify-center space-x-2">
-        <i class="fas fa-play-circle"></i>
-        <span>Watch Demo</span>
+    <a href="#demo"
+       class="px-6 py-3 bg-white text-[#0284c7] font-medium rounded-lg hover:bg-gray-50 border border-[#bae6fd] transition duration-300 transform hover:-translate-y-1 hover:scale-105">
+        <i class="fas fa-play-circle mr-2"></i> Watch Demo
     </a>
 </div>
+
+
+
+
+
+
+
+
         </div>
     </section>
 
@@ -357,6 +387,8 @@
                     <div class="mt-4 space-y-2">
                         <a href="privacy-policy.html" class="block text-sm hover:text-white transition">Privacy Policy</a>
                         <a href="terms-of-service.html" class="block text-sm hover:text-white transition">Terms of Service</a>
+                        <a href="refund-policy.html" class="block text-sm hover:text-white transition">Refund Policy</a>
+
                         <!-- <a href="hipaa-compliance.html" class="block text-sm hover:text-white transition">HIPAA Compliance</a>
                         <a href="gbdr_compliance.html" class="block text-sm hover:text-white transition">GDPR</a> -->
                     </div>
