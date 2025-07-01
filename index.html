@@ -71,8 +71,10 @@
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
-    <!-- Navigation -->
-     <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <!-- Navigation 
+     <header class="sticky top-0 z-50 bg-white shadow-sm"> -->
+     <header class="sticky top-0 z-50 bg-white shadow-sm" x-data="{ mobileOpen: false }">
+   
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
             <div class="flex items-center space-x-2">
@@ -93,10 +95,33 @@
                     <!-- <a href="#partner" class="hidden md:inline-block px-4 py-2 text-primary-600 font-medium rounded-lg hover:bg-primary-50 transition">Partner With Us</a> -->
                     <a href="#join-waitlist" class="px-4 py-2 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition">Join Waitlist</a>
                 </div>
-                <button class="md:hidden focus:outline-none">
+             <!--   <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-600 text-xl"></i>
+                </button>-->
+                    <button class="md:hidden focus:outline-none" @click="mobileOpen = !mobileOpen">
                     <i class="fas fa-bars text-gray-600 text-xl"></i>
                 </button>
+    
+
             </div>
+        <div
+  x-show="mobileOpen"
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="opacity-0 transform -translate-y-4"
+  x-transition:enter-end="opacity-100 transform translate-y-0"
+  x-transition:leave="transition ease-in duration-200"
+  x-transition:leave-start="opacity-100 transform translate-y-0"
+  x-transition:leave-end="opacity-0 transform -translate-y-4"
+  class="md:hidden mt-2 space-y-2 pb-4 border-t pt-4"
+>
+  <a href="index.html" class="block text-gray-700 hover:text-primary-600">Home</a>
+  <a href="about_us.html" class="block text-primary-600 font-medium">About Us</a>
+  <a href="index.html#features" class="block text-gray-700 hover:text-primary-600">Features</a>
+  <a href="contact_us.html" class="block text-gray-700 hover:text-primary-600">Contact</a>
+  <a href="index.html#join-waitlist" class="block text-primary-600 font-medium">Partner With Us</a>
+  <a href="index.html#join-waitlist" class="block text-white bg-primary-600 hover:bg-primary-700 px-3 py-2 rounded">Join Waitlist</a>
+</div>
+
         </div>
     </header>
 
@@ -846,6 +871,17 @@
                 document.getElementById('waitlist-form').reset();
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "auto" }); // or "smooth" if you prefer
+        }, 100);
+      }
+    }
+  });
     </script>
 </body>
 </html>
